@@ -1,4 +1,4 @@
-package introducao;
+package br.com.emmanuelneri.introducao;
 
 public class Pessoa {
 
