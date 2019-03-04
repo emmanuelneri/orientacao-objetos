@@ -1,5 +1,6 @@
 package br.com.emmanuelneri.heranca.exercicios.exercicio5;
 
+//Criar uma hierarquia de classes para atender uma empresa prestadora de serviço. A empresa oferece os serviços de empréstimo, seguro de veículo e seguro de vida
 public class TesteExercicio5 {
 
     public static void main(String[] args) {

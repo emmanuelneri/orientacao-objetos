@@ -1,5 +1,6 @@
 package br.com.emmanuelneri.heranca.exercicios.exercicio1;
 
+//Criar uma estrutura de hierarquia de classes com pelo menos 2 níveis abaixo da classe inicial Animal. (obs: as classes devem conter atributos e métodos)
 public class TesteExercicio1 {
 
     public static void main(String[] args) {
