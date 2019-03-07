@@ -24,8 +24,6 @@ public class TesteExercicioTributavel {
         Pessoa filhoMaria = new Pessoa("Joao");
         SeguroVida seguroVida = new SeguroVida(maria, "Seguro da Maria", 200, filhoMaria);
         seguroVida.setApolice("0494039403");
-
-        seguroVida.calcularImposto();
     }
 
 }
