@@ -5,7 +5,7 @@ public class DescontoEspecial implements Desconto {
     private static final double DESCONTO_ESPECIAL = 0.15;
 
     @Override
-    public double calcular(double valor) {
+    public Double calcular(double valor) {
         return valor * DESCONTO_ESPECIAL;
     }
 }
