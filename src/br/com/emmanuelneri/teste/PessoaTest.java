@@ -12,11 +12,4 @@ public class PessoaTest {
         Assert.assertEquals("Nome", pessoa.getNome());
     }
 
-
-    @Test
-    public void testDouble() {
-        Double valor = 10d;
-        Assert.assertEquals(Double.valueOf(10), valor);
-    }
-
 }
