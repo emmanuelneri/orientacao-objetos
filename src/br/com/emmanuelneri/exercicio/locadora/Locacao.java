@@ -1,8 +1,5 @@
 package br.com.emmanuelneri.exercicio.locadora;
 
-import br.com.emmanuelneri.exercicio.locadora.exception.VeiculoIndisponivelException;
-import br.com.emmanuelneri.java.Test;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -18,12 +15,14 @@ public class Locacao extends Aluguel {
         this.quilometragemInicial = quilometragemInicial;
     }
 
-    public Locacao(Reserva reserva) {
-        this(reserva.getVeiculo(),
+    public static Locacao criarAPartirDaReserva(Reserva reserva) {
+        Veiculo veiculo = reserva.getVeiculo();
+        veiculo.disponibilizar();
+        return new Locacao(veiculo,
                 reserva.getCliente(),
                 reserva.getDataRetirada(),
                 reserva.getDataDevolucao(),
-                reserva.getVeiculo().getQuilometragem());
+                veiculo.getQuilometragem());
     }
 
     public void fechar(BigDecimal quilometragemFinal, Funcionario funcionario) {
@@ -46,5 +45,13 @@ public class Locacao extends Aluguel {
 
         this.status = StatusLocacao.CANCELADA;
         getVeiculo().disponibilizar();
+    }
+
+    public StatusLocacao getStatus() {
+        return status;
+    }
+
+    public Entrega getEntrega() {
+        return entrega;
     }
 }

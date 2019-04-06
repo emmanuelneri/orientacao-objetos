@@ -20,6 +20,7 @@ public abstract class Aluguel {
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
         validaVeiculo();
+        indisponibilizaVeiculo();
     }
 
     protected BigDecimal calcularValor(LocalDate dataFim) {
