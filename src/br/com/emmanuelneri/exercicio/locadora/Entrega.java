@@ -6,11 +6,12 @@ import java.time.LocalDate;
 public class Entrega {
 
     private BigDecimal quilometragemFinal;
-    private LocalDate dataEntrega = LocalDate.now();
+    private LocalDate dataEntrega;
     private Funcionario funcionario;
 
-    public Entrega(BigDecimal quilometragemFinal, Funcionario funcionario) {
+    public Entrega(BigDecimal quilometragemFinal, LocalDate dataEntrega, Funcionario funcionario) {
         this.quilometragemFinal = quilometragemFinal;
+        this.dataEntrega = dataEntrega;
         this.funcionario = funcionario;
     }
 

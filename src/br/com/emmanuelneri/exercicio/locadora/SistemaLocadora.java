@@ -23,7 +23,7 @@ public class SistemaLocadora {
 
         Funcionario funcionario = new Funcionario("Jose", "321393232");
         Locacao locacao = Locacao.criarAPartirDaReserva(reserva);
-        locacao.fechar(BigDecimal.valueOf(1_000), funcionario);
+        locacao.fechar(BigDecimal.valueOf(1_000), funcionario, LocalDate.of(2019, 4, 8));
 
         System.out.println("Status da locação: " + locacao.getStatus());
         System.out.println("Veículo disponível: " + veiculo.isDisponivel());

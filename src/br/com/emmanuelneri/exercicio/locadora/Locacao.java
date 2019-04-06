@@ -25,14 +25,14 @@ public class Locacao extends Aluguel {
                 veiculo.getQuilometragem());
     }
 
-    public void fechar(BigDecimal quilometragemFinal, Funcionario funcionario) {
+    public void fechar(BigDecimal quilometragemFinal, Funcionario funcionario, LocalDate dataEntrega) {
         if(this.status != StatusLocacao.ABERTA) {
             throw new StatusInvalidoException(
                     "Locação não pode ser fechada");
         }
 
         this.status = StatusLocacao.FECHADA;
-        this.entrega = new Entrega(quilometragemFinal, funcionario);
+        this.entrega = new Entrega(quilometragemFinal, dataEntrega, funcionario);
         this.valorTotal = calcularValor(entrega.getDataEntrega());
         getVeiculo().disponibilizar(quilometragemFinal);
     }
